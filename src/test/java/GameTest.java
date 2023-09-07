@@ -60,6 +60,7 @@ public class GameTest {
         });
 
     }
+
     @Test
     //Не зарегестрированы оба игрока.
     public void TwoPlayerIsNotRegister() {
