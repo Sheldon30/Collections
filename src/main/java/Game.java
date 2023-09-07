@@ -1,17 +1,17 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Game {
-    ArrayList<Player> playerList = new ArrayList<>();
-
+    HashMap<Player, Player> players = new HashMap<>();
 
 
     public void register (Player player) {
-        playerList.add(player);
+        players.put(player, player);
     }
     public Player findByName(String playerName) {
-        for (Player player:playerList){
-            if (player.getName() == playerName) {
-                return player;
+        for (Player key: players.keySet()){
+            if (key.getName() == playerName) {
+                return key;
             }
         }
         return null;
